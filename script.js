@@ -6,9 +6,31 @@ $(document).ready( function() {
             $('.navbar').removeClass('sticky');
         }
     });
-    // Toogle Menu/Navbar script
+    // Toogle Menu/Navbar Script
     $('.menu-btn').click(function() {
         $('.navbar .menu').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
+    });
+
+    // Owl Carousel Script
+    $('.carousel').owlCarousel({
+        margin: 20, // L-R Margin between each.
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoPlayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            600: {
+                items: 2,
+                nav: false
+            },
+            1000: {
+                items: 3,
+                nav: false
+            },
+        }
     });
 });
