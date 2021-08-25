@@ -6,6 +6,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 .max-width {
     max-width: 1300px;
     padding: 0 80px;
@@ -119,7 +122,7 @@
 }
 
 /* Similar Content Styling */
-.about, .services, .skills, .projects, .contact {
+.about, .services, .skills, .projects, .contact, footer {
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -438,6 +441,9 @@ a.disabled {
 .contact .contact-content .info .sub-title a {
     color: #333;
 }
+.contact .contact-content .info .sub-title a:hover {
+    text-decoration: underline;
+}
 .contact .right form .fields {
     display: flex;
 }
@@ -491,6 +497,20 @@ a.disabled {
 .contact .right form .button button:hover {
     color: crimson;
     background: none;
+}
+
+/* Footer Section Styling */
+footer {
+    background: #111;
+    padding: 20px 23px;
+    color: #fff;
+}
+footer span a {
+    color: crimson;
+    text-decoration: none;
+}
+footer span a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive media query Start */
