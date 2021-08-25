@@ -1,15 +1,32 @@
-$(document).ready( function() {
-    $(window).scroll(function() {
-        if(this.scrollY > 20) {
-            $('.navbar').addClass('sticky');
-        }else {
-            $('.navbar').removeClass('sticky');
-        }
+$(document).ready(function () {
+    $(window).scroll(function () {
+        toggleClass('.navbar', 'sticky', 20);
+        toggleClass('.scroll-up-btn', 'show', 500);
     });
+
+    function toggleClass(searchClass, toggleClass, scrolled) {
+        this.scrollY > scrolled ? $(searchClass).addClass(toggleClass) : $(searchClass).removeClass(toggleClass);
+    }
+
     // Toogle Menu/Navbar Script
-    $('.menu-btn').click(function() {
+    $('.menu-btn').click(function () {
         $('.navbar .menu').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
+    });
+
+    // Typing Animation Script
+    new Typed('.typing', {
+        strings: ['Developer', 'Consultant', 'Designer', 'Freelancer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+    new Typed('.typing-2', {
+        strings: ['Developer', 'Consultant', 'Designer', 'Freelancer'],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
     });
 
     // Owl Carousel Script
