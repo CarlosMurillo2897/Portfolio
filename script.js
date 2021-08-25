@@ -8,9 +8,17 @@ $(document).ready( function() {
     });
     // Toogle Menu/Navbar Script
     $('.menu-btn').click(function() {
+        toggleClasses();
+    });
+    
+    $('.menu li a').click(function() {
+        toggleClasses();
+    });
+
+    function toggleClasses() {
         $('.navbar .menu').toggleClass('active');
         $('.menu-btn i').toggleClass('active');
-    });
+    }
 
     // Owl Carousel Script
     $('.carousel').owlCarousel({
